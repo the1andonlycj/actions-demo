@@ -54,7 +54,7 @@ const BasicProfile = () => {
   });
 
   return (
-    <Formik
+    <Formik 
       initialValues={{
         name: name,
         email: email,
@@ -76,31 +76,32 @@ const BasicProfile = () => {
           <div className="bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4 flex flex-col my-2">
             <div className="-mx-3 md:flex mb-6">
               <div className="md:w-1/2 px-3 mb-6 md:mb-0">
-                <FormField label="Name" name="name" type="text" />
+                <FormField data-test='name-field' label="Name" name="name" type="text" />
               </div>
               <div className="md:w-1/2 px-3">
-                <FormField label="Email" name="email" type="text" />
+                <FormField data-test='email-field' label="Email" name="email" type="text" />
               </div>
             </div>
 
             <div className="-mx-3 md:flex mb-2">
               <div className="md:w-1/2 px-3 mb-6 md:mb-0">
-                <FormField label="Position" name="position" type="text" />
+                <FormField data-test="position-field" label="Position" name="position" type="text" />
               </div>
               <div className="md:w-1/2 px-3">
-                <FormField label="Languages" name="languages" type="text" />
+                <FormField data-test="languages-field" label="Languages" name="languages" type="text" />
               </div>
               <div className="md:w-1/2 px-3">
-                <FormField label="Company" name="company" type="text" />
+                <FormField data-test="company-field" label="Company" name="company" type="text" />
               </div>
             </div>
 
             <div className="-mx-3 md:flex mb-2">
               <div className="md:w-1/2 px-3 mb-6 md:mb-0">
-                <FormField label="Education" name="education" type="text" />
+                <FormField data-test="education-field" label="Education" name="education" type="text" />
               </div>
               <div className="md:w-1/2 px-3">
                 <FormField
+                  data-test="company-address-field" 
                   label="Company Address"
                   name="companyAddress"
                   type="text"
@@ -108,6 +109,7 @@ const BasicProfile = () => {
               </div>
               <div className="md:w-1/2 px-3">
                 <FormField
+                  data-test="certification-field"
                   label="Certification"
                   name="certification"
                   type="text"
@@ -117,17 +119,17 @@ const BasicProfile = () => {
 
             <div className="-mx-3 md:flex mb-2">
               <div className="md:w-1/2 px-3 mb-6 md:mb-0">
-                <FormField label="Interests" name="interests" type="text" />
+                <FormField data-test="interests-field" label="Interests" name="interests" type="text" />
               </div>
               <div className="md:w-1/2 px-3">
-                <FormField label="Skills" name="skills" type="text" />
+                <FormField data-test="skills-field" label="Skills" name="skills" type="text" />
               </div>
               <div className="md:w-1/2 px-3">
-                <FormField label="Experience" name="experience" type="text" />
+                <FormField data-test="experience-field" label="Experience" name="experience" type="text" />
               </div>
             </div>
             <div className="w-full mt-5 ">
-              <button className="block uppercase mx-auto shadow bg-indigo-500 hover:bg-indigo-700 focus:shadow-outline focus:outline-none text-white text-xs py-3 px-10 rounded font-bold">
+              <button data-test="submit-button" className="block uppercase mx-auto shadow bg-indigo-500 hover:bg-indigo-700 focus:shadow-outline focus:outline-none text-white text-xs py-3 px-10 rounded font-bold">
                 Save
               </button>
             </div>
